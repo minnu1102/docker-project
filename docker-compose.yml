@@ -1,7 +1,7 @@
 networks:
   overlay-network:
     driver: overlay
-version: '3.8'
+version: "3.8"
 
 services:
   flower-shop:
@@ -9,7 +9,8 @@ services:
     ports:
       - "8000:80"
     deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
     networks:
       - overlay-network
-    
-
