@@ -1,0 +1,15 @@
+networks:
+  overlay-network:
+    driver: overlay
+version: '3.8'
+
+services:
+  flower-shop:
+    image: poorna730/my-app
+    ports:
+      - "8000:80"
+    deploy:
+    networks:
+      - overlay-network
+    
+
