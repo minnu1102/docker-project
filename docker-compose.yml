@@ -1,11 +1,8 @@
-networks:
-  overlay-network:
-    driver: overlay
 version: "3.8"
 
 services:
   flower-shop:
-    image: poorna730/my-app
+    image: poorna730/my-app:latest
     ports:
       - "8000:80"
     deploy:
@@ -14,3 +11,7 @@ services:
         condition: on-failure
     networks:
       - overlay-network
+
+networks:
+  overlay-network:
+    driver: overlay
