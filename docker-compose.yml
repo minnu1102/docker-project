@@ -1,16 +1,21 @@
-networks:
-  overlay-network:
-    driver: overlay
 version: "3.8"
 
 services:
   flower-shop:
-    image: poorna730/my-app
+    image: xanderbilla/my-app
     ports:
       - "8000:80"
     deploy:
       replicas: 1
       restart_policy:
         condition: on-failure
+      placement:
+        constraints:
+          - node.role == manager
     networks:
       - overlay-network
+
+networks:
+  overlay-network:
+    driver: overlay
+    attachable: true

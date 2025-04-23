@@ -3,7 +3,7 @@ setlocal EnableDelayedExpansion
 
 REM Variables
 set VERSION_FILE=version.txt
-set DOCKER_USERNAME=poorna730
+set DOCKER_USERNAME=xanderbilla
 set CLIENT_IMAGE_NAME=my-app
 
 REM Ensure version file exists
