@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   flower-shop:
-    image: xanderbilla/my-app
+    image: poorna730/my-app
     ports:
       - "8000:80"
     deploy:
